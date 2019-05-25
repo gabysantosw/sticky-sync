@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Stick w/me</title>
+  <style>{% include "styles.css" %}</style>
+</head>
+<body class="body">
+  <main class="stickies">
+    <h1 class="h1 t-heading">SYNCED -> 19/05/18</h1>
+
+    {%- for sticky in collections.sticky -%}
+    <div class="sticky {{ sticky.data.color }}">
+      <h2 class="sticky__title t-title">{{ sticky.data.title }}</h2>
+      <p class="sticky__body t-body">{{ sticky.data.body }}</p>
+      <h3 class="sticky__footer t-footer">{{ sticky.data.footer }}</h3>
+    </div>
+    {%- endfor -%}
+
+  </main>
+</body>
+</html>

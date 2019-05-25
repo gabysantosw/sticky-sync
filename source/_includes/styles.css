@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker|Shadows+Into+Light&display=swap");
+html, body {
+  margin: 0;
+  font-size: 10px; }
+
+h1, h2, h3, p {
+  margin: 0; }
+
+.t-heading {
+  font-family: "Permanent Marker", sans-serif;
+  font-size: 2.4rem; }
+
+.t-title {
+  font-family: "Permanent Marker", sans-serif;
+  font-size: 2.8rem; }
+
+.t-body {
+  font-family: "Shadows Into Light", serif;
+  font-size: 2.4rem; }
+
+.t-footer {
+  font-family: "Permanent Marker", sans-serif;
+  font-size: 1.8rem; }
+
+.yellow {
+  background-color: #fdfdb4; }
+
+.green {
+  background-color: #99e6b3; }
+
+.purple {
+  background-color: #d3b8f9; }
+
+.blue {
+  background-color: #bae3f7; }
+
+.red {
+  background-color: #fecdcd; }
+
+.body {
+  padding: 24px;
+  background-color: #263340; }
+
+.h1 {
+  margin-bottom: 16px;
+  color: #cfd9e2;
+  transform: rotateZ(-2deg); }
+
+.stickies {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.sticky {
+  width: 400px;
+  max-width: 100%;
+  min-height: 370px;
+  box-sizing: border-box;
+  margin-bottom: 32px;
+  padding: 16px 24px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3) 50px, transparent 60px);
+  position: relative; }
+  .sticky::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 50%, transparent 50%);
+    position: absolute;
+    bottom: 0;
+    right: 0; }
+  .sticky::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-image: linear-gradient(135deg, transparent 50%, #263340 50%);
+    position: absolute;
+    bottom: -5px;
+    right: -5px; }
+
+.sticky:nth-child(even) {
+  transform: rotateZ(-2deg); }
+
+.sticky:nth-child(odd) {
+  transform: rotateZ(1deg); }
+
+.sticky__title {
+  text-align: center;
+  line-height: 1em; }
+
+.sticky__body {
+  margin: 16px 0;
+  letter-spacing: .1rem;
+  line-height: 1.2em; }
+
+.sticky__footer {
+  padding-right: 30px;
+  text-align: right;
+  line-height: 1em; }
