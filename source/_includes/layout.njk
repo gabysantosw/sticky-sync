@@ -11,13 +11,13 @@
   <main class="stickies">
     <h1 class="h1 t-heading">SYNCED -> 19/05/18</h1>
 
-    {%- for sticky in collections.sticky -%}
+    {% for sticky in collections.sticky | reverse %}
     <div class="sticky {{ sticky.data.color }}">
       <h2 class="sticky__title t-title">{{ sticky.data.title }}</h2>
       <p class="sticky__body t-body">{{ sticky.data.body }}</p>
       <h3 class="sticky__footer t-footer">{{ sticky.data.footer }}</h3>
     </div>
-    {%- endfor -%}
+    {% endfor %}
 
   </main>
 </body>

@@ -1,0 +1,139 @@
+// INCLUDES
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Shadows+Into+Light&display=swap');
+
+// RESETS
+html, body {
+  margin: 0;
+  font-size: 10px;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+// SETUP
+// colors
+$dark: hsl(210, 25%, 20%);
+$light: hsl(210, 25%, 85%);
+$yellow: hsl(60, 95%, 85%);
+$green: hsl(140, 60%, 75%);
+$blue: hsl(200, 80%, 85%);
+$purple: hsl(265, 85%, 85%);
+$red: hsl(0, 95%, 90%);
+$darker: hsla(0, 0%, 0%, .3);
+$lighter: hsla(0, 0%, 100%, .3);
+// spacing
+$x1: 8px;
+$x2: 16px;
+$x3: 24px;
+$x4: 32px;
+$x5: 48px;
+//fonts
+$f-marker: 'Permanent Marker', sans-serif;
+$f-shadows: 'Shadows Into Light', serif;
+
+// UTILITIES
+// typography
+.t-heading {
+  font-family: $f-marker;
+  font-size: 2.4rem;
+}
+// stickies typography
+.t-title {
+  font-family: $f-marker;
+  font-size: 2.8rem;
+}
+.t-body {
+  font-family: $f-shadows;
+  font-size: 2.4rem;
+}
+.t-footer {
+  font-family: $f-marker;
+  font-size: 1.8rem;
+}
+// sticky colors
+.yellow {
+  background-color: $yellow;
+}
+.green {
+  background-color: $green;
+}
+.purple {
+  background-color: $purple;
+}
+.blue {
+  background-color: $blue;
+}
+.red {
+  background-color: $red;
+}
+
+// BASICS
+.body {
+  padding: $x3;
+  background-color: $dark;
+}
+
+.h1 {
+  margin-bottom: $x2;
+  color: $light;
+  transform: rotateZ(-2deg);
+}
+
+.stickies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sticky {
+  width: 400px;
+  max-width: 100%;
+  min-height: 370px;
+  box-sizing: border-box;
+  margin-bottom: $x4;
+  padding: $x2 $x3;
+  background-image: linear-gradient($lighter 50px, transparent 60px);
+  position: relative;
+  &::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-image: linear-gradient(135deg, $darker 50%, transparent 50%);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  &::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-image: linear-gradient(135deg, transparent 50%, $dark 50%);
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+  }
+}
+.sticky:nth-child(even) {
+  transform: rotateZ(-2deg);
+}
+.sticky:nth-child(odd) {
+  transform: rotateZ(1deg);
+}
+
+.sticky__title {
+  text-align: center;
+  line-height: 1em;
+}
+
+.sticky__body {
+  margin: $x2 0;
+  letter-spacing: .1rem;
+  line-height: 1.2em;
+}
+
+.sticky__footer {
+  padding-right: 30px;
+  text-align: right;
+  line-height: 1em;
+}

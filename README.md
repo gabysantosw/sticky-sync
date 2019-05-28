@@ -55,4 +55,4 @@ module.exports = {
 - linking styles and script using nunjucks's `{% include 'file_path' %}`
 
 ## Avoiding Eleventy to render the .md as a single page, only add to collections
-Set `permalik: false` to front matter
+Set `| reverse` in the for... in nunjuck's loop.
