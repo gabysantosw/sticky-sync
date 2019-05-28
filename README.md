@@ -1,5 +1,9 @@
 # Sticky Notes
 
+[Live Site](https://gabysantosw.github.io/\sticky-sync\_site\index.html)
+
+---
+
 ## Installing SASS
 - Using node, local installation: `npm install node-sass --save-dev`
 - Compile: `npx node-sass input.scss output.css`
@@ -49,3 +53,6 @@ module.exports = {
 - add a `_includes` folder inside
   - create a `layout.njk` file with the base html of the site
 - linking styles and script using nunjucks's `{% include 'file_path' %}`
+
+## Avoiding Eleventy to render the .md as a single page, only add to collections
+Set `permalik: false` to front matter
