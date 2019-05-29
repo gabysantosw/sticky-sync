@@ -1,6 +1,6 @@
 # Sticky Notes
 
-[Live Site](https://gabysantosw.github.io/sticky-sync/_site/index.html)
+[Live Site](https://gabysantosw.github.io/sticky-sync/index.html)
 
 ---
 
